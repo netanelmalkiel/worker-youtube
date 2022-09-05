@@ -47,8 +47,8 @@ resource "aws_instance" "tg-youtube-bot" {
           sudo yum install docker -y
           sudo systemctl enable docker.service
           sudo service docker start
-          git clone https://github.com/netanelmalkiel/bot-youtube.git
-          (cd ../../bot-youtube/; sudo docker build -t bot .)
+          git clone https://github.com/netanelmalkiel/worker-youtube.git
+          (cd ../../worker-youtube/; sudo docker build -t bot .)
           sudo docker run -d --restart=always bot
 
   EOF
