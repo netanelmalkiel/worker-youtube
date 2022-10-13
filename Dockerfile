@@ -1,5 +1,5 @@
 FROM python:3.8.12-slim-buster
-WORKDIR /worker-youtube
+WORKDIR /home/ec2-user
 COPY . .
 
 RUN ["./pip.sh"]
