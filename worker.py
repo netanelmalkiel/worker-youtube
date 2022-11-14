@@ -13,7 +13,7 @@ def process_msg(msg):
     v_name = ''.join(v_name)
     s3_client = boto3.client('s3')
     try:
-        s3_client.upload_file(v_name, 'tg-youtube-bot-oct', v_name)
+        s3_client.upload_file(v_name, 'tg-youtube-bot', v_name)
     except ClientError as e:
         logging.error(e)
         return False
